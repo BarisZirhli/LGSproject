@@ -1,0 +1,87 @@
+# Visual Studio
+
+.vs/
+\*.user
+\*.suo
+\*.userosscache
+\*.sln.docstates
+
+# Build results
+
+\[Bb]in/
+\[Oo]bj/
+
+# NuGet packages
+
+\*.nupkg
+packages/
+
+# .NET Core
+
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Resharper
+
+\_ReSharper\*/
+\*.ReSharperCache
+
+# Rider
+
+.idea/
+\*.sln.iml
+
+# User-specific files
+
+\*.user
+\*.rsuser
+\*.suo
+\*.vscode/
+
+# OS generated files
+
+.DS\_Store
+Thumbs.db
+
+# Test output
+
+TestResults/
+
+# Publish artifacts
+
+publish/
+
+# Entity Framework Migrations
+
+Migrations/\*\*/Snapshot\*/
+
+# Windows image file caches
+
+Thumbs.db
+ehthumbs.db
+
+# DotCover
+
+\*.dotCover
+
+# JetBrains Rider
+
+.idea/
+\*.sln.iml
+
+# Visual Studio Code
+
+.vscode/
+
+# Azure DevOps
+
+azure-pipelines.yml
+
+# Others
+
+\*.log
+
+# Include backups
+
+\#\*\~
