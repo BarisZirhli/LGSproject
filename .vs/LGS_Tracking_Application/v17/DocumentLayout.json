@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:service\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -62,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "admin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\admin.cs",
               "RelativeDocumentMoniker": "admin.cs",
@@ -75,6 +79,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T10:41:00.55Z",
               "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-12T15:37:43.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -110,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -122,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserExam.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Models\\UserExam.cs",
               "RelativeDocumentMoniker": "Models\\UserExam.cs",
@@ -134,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Exam.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Models\\Exam.cs",
               "RelativeDocumentMoniker": "Models\\Exam.cs",
@@ -146,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Models\\Admin.cs",
               "RelativeDocumentMoniker": "Models\\Admin.cs",
@@ -158,19 +175,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T13:19:27.111Z"
+              "WhenOpened": "2025-05-09T13:19:27.111Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ExamService.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\ExamService.cs",
               "RelativeDocumentMoniker": "Service\\ExamService.cs",
@@ -182,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "student.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs",
               "RelativeDocumentMoniker": "student.cs",
@@ -194,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "edit.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs",
               "RelativeDocumentMoniker": "edit.cs",
@@ -205,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\UserService.cs",
@@ -217,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "edit.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs",
               "RelativeDocumentMoniker": "edit.cs",
@@ -229,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "student.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs",
               "RelativeDocumentMoniker": "student.cs",
@@ -242,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "admin.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\admin.cs",
               "RelativeDocumentMoniker": "admin.cs",

@@ -85,3 +85,8 @@ azure-pipelines.yml
 # Include backups
 
 \#\*\~
+
+
+# Bunlar varsa kaldır:
+appsettings.json
+appsettings.*.json
