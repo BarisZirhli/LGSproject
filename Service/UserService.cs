@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 
 
-namespace LGS_Tracking_Application.Data
+namespace LGS_Tracking_Application.Service
 {
     public class UserService
     {
@@ -69,7 +69,7 @@ namespace LGS_Tracking_Application.Data
         {
             return _context.Users.Find(id);
         }
-        public void UpdateUser(string username,string password,string grade)
+        public void UpdateUser(string username,string password,int grade)
         {
             var existingUser = _context.Users.FirstOrDefault(user => user.UserName.Equals(username));
             if (existingUser != null)

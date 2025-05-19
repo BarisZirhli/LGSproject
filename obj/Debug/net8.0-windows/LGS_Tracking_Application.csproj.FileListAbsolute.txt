@@ -159,3 +159,11 @@ C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\Micro
 C:\Users\pc\source\repos\LGS_Tracking_Application\obj\Debug\net8.0-windows\LGS_Tracking_Application.login.resources
 C:\Users\pc\source\repos\LGS_Tracking_Application\obj\Debug\net8.0-windows\LGS_Tracking_Application.student.resources
 C:\Users\pc\source\repos\LGS_Tracking_Application\obj\Debug\net8.0-windows\LGS_Tracking_Application.edit.resources
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.Core.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.Fonts.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.Package.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.Tokenization.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.Tokens.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\obj\Debug\net8.0-windows\LGS_Tracking_Application.ResultScreen.resources

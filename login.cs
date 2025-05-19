@@ -1,5 +1,5 @@
-﻿using LGS_Tracking_Application.Data;
-using LGS_Tracking_Application.Service;
+﻿using LGS_Tracking_Application.Service;
+
 namespace LGS_Tracking_Application
 {
     public partial class login : Form

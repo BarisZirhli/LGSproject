@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +9,23 @@ namespace LGS_Tracking_Application.Models
 {
     public class Result
     {
-
+        [Key]
         public int Id { get; set; }
         public int UserId { get; set; }
         public int ExamId { get; set; }
-        public string? ResultValue { get; set; } // examResult => ResultValue
-        public DateTime Date { get; set; } // examDate => Date
-        public string? Grade { get; set; } // examGrade => Grade
-        public string? Subject { get; set; } // examSubject => Subject
-        public User? User { get; set; }
-        public Exam? Exam { get; set; }
+        public int TurkishTrueNumber { get; set; }
+        public int TurkishFalseNumber { get; set; }
+        public int MathTrueNumber { get; set; }
+        public int MathFalseNumber { get; set; }
+        public int ScienceTrueNumber { get; set; }
+        public int ScienceFalseNumber { get; set; }
+        public int SocialTrueNumber { get; set; }
+        public int SocialFalseNumber { get; set; }
+        public DateTime Date { get; set; } 
+        public int Grade { get; set; }
+
+
+
 
     }
 }

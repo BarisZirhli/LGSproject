@@ -21,52 +21,6 @@ namespace LGS_Tracking_Application.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Exam", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ExamName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Grade")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PdfFilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Subject")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("answerKeyFilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Exams");
-                });
-
-            modelBuilder.Entity("ExamUser", b =>
-                {
-                    b.Property<int>("ExamsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UsersUserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ExamsId", "UsersUserId");
-
-                    b.HasIndex("UsersUserId");
-
-                    b.ToTable("ExamUser");
-                });
-
             modelBuilder.Entity("LGS_Tracking_Application.Models.Admin", b =>
                 {
                     b.Property<int>("AdminId")
@@ -106,46 +60,41 @@ namespace LGS_Tracking_Application.Migrations
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Grade")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Grade")
+                        .HasColumnType("int");
 
-                    b.Property<string>("ResultValue")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MathFalseNumber")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Subject")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MathTrueNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ScienceFalseNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ScienceTrueNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SocialFalseNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SocialTrueNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TurkishFalseNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TurkishTrueNumber")
+                        .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ExamId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Results");
-                });
-
-            modelBuilder.Entity("LGS_Tracking_Application.Models.UserExam", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ExamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserKeyAnswerPdffile")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId", "ExamId");
-
-                    b.HasIndex("ExamId");
-
-                    b.ToTable("UserExam", (string)null);
                 });
 
             modelBuilder.Entity("User", b =>
@@ -160,9 +109,8 @@ namespace LGS_Tracking_Application.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Grade")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Grade")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -177,6 +125,9 @@ namespace LGS_Tracking_Application.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("TGID")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -187,67 +138,18 @@ namespace LGS_Tracking_Application.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ExamUser", b =>
-                {
-                    b.HasOne("Exam", null)
-                        .WithMany()
-                        .HasForeignKey("ExamsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("User", null)
-                        .WithMany()
-                        .HasForeignKey("UsersUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("LGS_Tracking_Application.Models.Result", b =>
                 {
-                    b.HasOne("Exam", "Exam")
-                        .WithMany()
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("User", "User")
-                        .WithMany()
+                    b.HasOne("User", null)
+                        .WithMany("UserResults")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Exam");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("LGS_Tracking_Application.Models.UserExam", b =>
-                {
-                    b.HasOne("Exam", "Exam")
-                        .WithMany("UserExams")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("User", "User")
-                        .WithMany("UserExams")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Exam");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Exam", b =>
-                {
-                    b.Navigation("UserExams");
                 });
 
             modelBuilder.Entity("User", b =>
                 {
-                    b.Navigation("UserExams");
+                    b.Navigation("UserResults");
                 });
 #pragma warning restore 612, 618
         }

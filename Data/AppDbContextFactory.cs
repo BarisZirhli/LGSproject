@@ -11,7 +11,7 @@ using System.IO;
             string path = Directory.GetCurrentDirectory();
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(path)
-                .AddJsonFile("appsetting.json")
+                .AddJsonFile("appsettings.json")
                 .Build();
 
             return configuration.GetConnectionString("Local");

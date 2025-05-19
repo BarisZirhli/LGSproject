@@ -1,4 +1,4 @@
-﻿using LGS_Tracking_Application.Data;
+﻿using LGS_Tracking_Application.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,9 +47,9 @@ namespace LGS_Tracking_Application
         {
             string username = textBox2.Text;  // Username input
             string password = textBox3.Text;  // Password input
-            string grade = textBox4.Text;     // Grade input
+            int grade = Convert.ToInt32(textBox4.Text);     // Grade input
 
-            if (!string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(grade))
+            if (!string.IsNullOrEmpty(password))
             {
                 // Kullanıcıyı güncelleme
                 userService.UpdateUser(username, password, grade);

@@ -90,3 +90,6 @@ azure-pipelines.yml
 # Bunlar varsa kaldır:
 appsettings.json
 appsettings.*.json
+
+*appsettings.json
+*appsettings.*.json

@@ -22,8 +22,9 @@ public class User
     public string? LastName { get; set; }
 
     [Required]
-    public string? Grade { get; set; }
+    public int? Grade { get; set; }
 
-  //  public ICollection<Exam> Exams { get; set; }
-    public ICollection<UserExam> UserExams { get; set; }
+    [Required]
+    public int? TGID { get; set; }
+    public ICollection<Result> UserResults { get; set; }
 }
