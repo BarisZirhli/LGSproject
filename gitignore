@@ -1,69 +1,101 @@
-# Derleme klasörleri
-**/bin/
-**/obj/
-
-# Visual Studio dosyaları
-.vs/
-*.user
-*.suo
+## .NET Core
+bin/
+obj/
+**/*.user
+**/*.suo
 *.userosscache
 *.sln.docstates
 
-# NuGet paketleri
-*.nupkg
-packages/
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
 
-# .NET Core dosyaları
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# ReSharper dosyaları
-_ReSharper*/
-*.ReSharperCache
-
-# Rider dosyaları
-.idea/
-*.sln.iml
-
-# Kullanıcıya özel dosyalar
-*.user
+# User-specific files
 *.rsuser
 *.suo
-*.vscode/
+*.user
+*.userosscache
+*.sln.docstates
 
-# OS tarafından oluşturulan dosyalar
-.DS_Store
-Thumbs.db
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
 
-# Test çıktıları
-TestResults/
+bin/
+obj/
+**/bin/
+**/obj/
+# Visual Studio for Mac
+.vscode/
+.idea/
 
-# Yayın çıktıları
-publish/
+# Rider
+*.sln.iml
 
-# Entity Framework Migrations
-Migrations/**/Snapshot*/
+# Visual Studio Code
+.vscode/
 
-# Windows resim dosyası önbellekleri
-Thumbs.db
-ehthumbs.db
+# Tye
+.tye/
 
-# DotCover dosyaları
-*.dotCover
+# Paket
+.paket/
+paket-files/
 
-# JetBrains Rider dosyaları
+# JetBrains Rider
 .idea/
 *.sln.iml
 
-# Visual Studio Code dosyaları
-.vscode/
+# DotCover
+*.dotCover
 
-# Azure DevOps dosyaları
-azure-pipelines.yml
-
-# Diğer dosyalar
+# Logs
 *.log
 
-# Yedek dosyalar
-#*~
+# Npm / node_modules (eğer frontend varsa)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Dependency directories
+packages/
+.nuget/
+
+# Other files
+*.ncrunch*
+.*crunch*.local.xml
+_ReSharper*/
+*.DotSettings.user
+*.dotsettings.user
+
+# User secrets (if using)
+secrets.json
+
+# LocalDB database
+*.mdf
+*.ldf
+
+# VSCode settings folder
+.vscode/
+
+# Others
+.env
+*.db
+*.sqlite
+*.pdb
+*.cache
+*.bak
+*.tmp
+*.swp
+*.swn
+
+# Publish output
+publish/
+*.vs/
+.env
