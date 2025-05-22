@@ -57,10 +57,22 @@ namespace LGS_Tracking_Application.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("EnglishFalseNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EnglishTrueNumber")
+                        .HasColumnType("int");
+
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
 
                     b.Property<int>("Grade")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HistoryFalseNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HistoryTrueNumber")
                         .HasColumnType("int");
 
                     b.Property<int>("MathFalseNumber")
@@ -69,16 +81,16 @@ namespace LGS_Tracking_Application.Migrations
                     b.Property<int>("MathTrueNumber")
                         .HasColumnType("int");
 
+                    b.Property<int>("ReligionFalseNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReligionTrueNumber")
+                        .HasColumnType("int");
+
                     b.Property<int>("ScienceFalseNumber")
                         .HasColumnType("int");
 
                     b.Property<int>("ScienceTrueNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SocialFalseNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SocialTrueNumber")
                         .HasColumnType("int");
 
                     b.Property<int>("TurkishFalseNumber")

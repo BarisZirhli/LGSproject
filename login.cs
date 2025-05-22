@@ -13,6 +13,10 @@ namespace LGS_Tracking_Application
             string connectionString = AppDbContextFactory.GetConnectionString();
             _context = new AppDbContext(connectionString);
             userService = new UserService(_context);
+
+            this.txtPassword.PasswordChar = '*'; 
+         
+            this.txtPassword.UseSystemPasswordChar = true; 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,7 +37,7 @@ namespace LGS_Tracking_Application
                 admin adminForm = new admin();
                 adminForm.Show();
             }
-            else if (Session.CurrentUser != null && Session.CurrentUser.Role.Equals("STUDENT"))
+            else if (Session.CurrentUser != null && Session.CurrentUser.Role.Equals("Student"))
             {
                 this.Hide();
                 student studentForm = new student();

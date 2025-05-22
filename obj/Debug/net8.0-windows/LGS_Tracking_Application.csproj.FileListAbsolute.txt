@@ -167,3 +167,7 @@ C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyT
 C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.Tokens.dll
 C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\UglyToad.PdfPig.dll
 C:\Users\pc\source\repos\LGS_Tracking_Application\obj\Debug\net8.0-windows\LGS_Tracking_Application.ResultScreen.resources
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\pc\source\repos\LGS_Tracking_Application\bin\Debug\net8.0-windows\itextsharp.dll

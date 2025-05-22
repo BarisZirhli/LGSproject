@@ -1,13 +1,11 @@
-﻿using LGS_Tracking_Application.Models;
-using Microsoft.Extensions.Configuration;
-
+﻿using LGS_Tracking_Application.Dto;
 
 namespace LGS_Tracking_Application.Service
 {
     public class UserService
     {
         private readonly AppDbContext _context;
-        
+
         public UserService(AppDbContext context)
         {
             _context = context;
@@ -15,15 +13,16 @@ namespace LGS_Tracking_Application.Service
 
         public List<User> GetAllUsers()
         {
-            if(Session.CurrentUser.Role.Equals("ADMIN"))
+            if (Session.CurrentUser.Role.Equals("ADMIN"))
             {
                 return _context.Users.ToList();
-            }  
+            }
             else
-            {   MessageBox.Show("You do not have permission to view this data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                MessageBox.Show("You do not have permission to view this data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw new UnauthorizedAccessException("You do not have permission to view this data.");
             }
-          
+
         }
 
         public void AddUser(User user)
@@ -41,13 +40,13 @@ namespace LGS_Tracking_Application.Service
             }
         }
 
-        public void DeleteUser(string username)
+        public void DeleteUser(int TGID)
         {
             try
             {
                 if (Session.CurrentAdmin.Role.Equals("ADMIN"))
                 {
-                    var user = _context.Users.FirstOrDefault(user => user.UserName.Equals(username));
+                    var user = _context.Users.FirstOrDefault(user => user.TGID.Equals(TGID));
                     if (user != null)
                     {
                         _context.Users.Remove(user);
@@ -56,7 +55,8 @@ namespace LGS_Tracking_Application.Service
                     }
                 }
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while deleting the user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw new Exception("An error occurred while deleting the user.", ex);
@@ -65,27 +65,104 @@ namespace LGS_Tracking_Application.Service
 
         }
 
-        public User GetUserById(int id)
+        public User GetUserByTGID(int TGID)
         {
-            return _context.Users.Find(id);
+            return _context.Users.FirstOrDefault(user => user.TGID == TGID);
         }
-        public void UpdateUser(string username,string password,int grade)
+
+        public User GetUserById(int userID)
         {
-            var existingUser = _context.Users.FirstOrDefault(user => user.UserName.Equals(username));
+            return _context.Users.Find(userID);
+        }
+
+        public User? GetUserByName(string fullname)
+        {
+            if (string.IsNullOrEmpty(fullname))
+            {
+                return null;
+            }
+
+            try 
+            {
+              
+                var nameParts = fullname.Trim().Split(' ');
+                if (nameParts.Length != 2)
+                {
+                    return null;
+                }
+
+                string firstName = nameParts[0];
+                string lastName = nameParts[1];
+
+                return _context.Users
+                    .FirstOrDefault(user => 
+                        (user.FirstName != null && user.LastName != null) &&
+                        (user.FirstName.ToLower() + " " + user.LastName.ToLower()) == fullname.ToLower());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetUserByName: {ex.Message}");
+                return null;
+            }
+        }
+
+        public List<User> GetUsersByName(string fullname)
+        {
+            if (string.IsNullOrEmpty(fullname))
+            {
+                return new List<User>();
+            }
+
+            try 
+            {
+                var nameParts = fullname.Trim().Split(' ');
+                if (nameParts.Length != 2)
+                {
+                    MessageBox.Show("Please enter both first and last name.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return new List<User>();
+                }
+
+                string firstName = nameParts[0];
+                string lastName = nameParts[1];
+
+                var users = _context.Users
+                    .Where(user => 
+                        (user.FirstName != null && user.LastName != null) &&
+                        (user.FirstName.ToLower() + " " + user.LastName.ToLower()) == fullname.ToLower())
+                    .ToList();
+
+                if (!users.Any())
+                {
+                    MessageBox.Show("No users found with the specified name.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                return users;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in GetUsersByName: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<User>();
+            }
+        }
+
+        public void UpdateUser(int TGID, string password, int grade)
+        {
+            var existingUser = _context.Users.FirstOrDefault(user => user.TGID.Equals(TGID));
             if (existingUser != null)
             {
                 existingUser.Password = password;
                 existingUser.Grade = grade;
 
                 _context.SaveChanges();
+                MessageBox.Show(UserDetailFromUsername(TGID), "User updated successfully.", MessageBoxButtons.OK, MessageBoxIcon.Information);  
+
             }
         }
 
-
-        public string UserDetailFromUsername(string username)
+        public string UserDetailFromUsername(int TGID)
         {
-            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
-            string userDetails = string.Empty;  
+            var user = _context.Users.FirstOrDefault(u => u.TGID == TGID);
+            string userDetails = string.Empty;
             if (user == null)
             {
                 MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -93,7 +170,7 @@ namespace LGS_Tracking_Application.Service
             }
             userDetails = $"{user.UserName};{user.Password};{user.Grade}";
 
-            return userDetails; 
+            return userDetails;
 
         }
         public void Login(string username, string password)
@@ -102,14 +179,14 @@ namespace LGS_Tracking_Application.Service
             try
             {
                 var user = _context.Users.FirstOrDefault(u => u.UserName == username && u.Password == password);
-                var admin = _context.admins.FirstOrDefault(u => u.UserName== username && u.Password == password); 
+                var admin = _context.admins.FirstOrDefault(u => u.UserName == username && u.Password == password);
 
-                if(admin != null)
+                if (admin != null)
                 {
                     Session.CurrentAdmin = admin;
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (user != null )
+                else if (user != null)
                 {
                     Session.CurrentUser = user;
                     MessageBox.Show("Login successful User!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -127,38 +204,56 @@ namespace LGS_Tracking_Application.Service
             }
         }
 
-
-
-     /*   public void CreateExam(User user, string examClass, string examTutorName, string examGrade, string examSubject, DateTime date)
+        public List<ResultDto> GetResultDtosFromUsers(List<User> users)
         {
-            var admin = _context.Users.Find(user.UserId);
-            if ((admin != null) && (admin.Role.Equals("ADMIN")))
+            try
             {
-                // Check if the user is an admin
-                if (admin.Role != "ADMIN")
+                if (users == null || !users.Any())
                 {
-                    throw new UnauthorizedAccessException("Only admins can create exams.");
+                    return new List<ResultDto>();
                 }
-                // Create a new exam and add it to the database
 
-                    var exam = new Exam
+
+                var userIds = users.Select(u => u.UserId).ToList();
+
+                var results = _context.Results
+                    .Where(r => userIds.Contains(r.UserId))
+                    .ToList();
+
+                var resultDtos = new List<ResultDto>();
+
+                foreach (var result in results)
                 {
-                    Date = date,
-                    PdfFilePath = null, // Set this to the actual file path if needed
-                    Grade = examGrade,
-                    Subject = examSubject,
-                    answerKeyFilePath = null,
+                   
+                            var dto = new ResultDto
+                            {
+                                UserId = result.UserId,
+                                ExamId = result.ExamId,
+                                TurkishNet = result.TurkishTrueNumber - (result.TurkishFalseNumber / 4.0),
+                                MathNet = result.MathTrueNumber - (result.MathFalseNumber / 4.0),
+                                ScienceNet = result.ScienceTrueNumber - (result.ScienceFalseNumber / 4.0),
+                                HistoryNet = result.HistoryTrueNumber - (result.HistoryFalseNumber / 4.0),
+                                ReligionNet = result.ReligionTrueNumber - (result.ReligionFalseNumber / 4.0),
+                                EnglishNet = result.EnglishTrueNumber - (result.EnglishFalseNumber / 4.0),
+                                DateTime = result.Date
+                            };
+                            resultDtos.Add(dto);
+                        
+                    
+                }
 
-                    };
+                if (!resultDtos.Any())
+                {
+                    MessageBox.Show("No results found for the specified users.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-                _context.Exams.Add(exam);
-                _context.SaveChanges();
+                return resultDtos;
             }
-            else
+            catch (Exception ex)
             {
-                throw new UnauthorizedAccessException("Only admins can create exams.");
+                MessageBox.Show($"Error retrieving results: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<ResultDto>();
             }
         }
-     */
     }
 }

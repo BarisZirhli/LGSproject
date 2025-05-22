@@ -143,9 +143,9 @@
         private Label label1;
         private Label label2;
         private Panel panel1;
-        private TextBox txtPassword;
         private TextBox txtUsername;
         private Label label3;
         private Label label4;
+        private TextBox txtPassword;
     }
 }

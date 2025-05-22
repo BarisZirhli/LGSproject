@@ -30,8 +30,8 @@ namespace LGS_Tracking_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
-            userService.DeleteUser(username);
+            int TGID = Convert.ToInt32(textBox1.Text);
+            userService.DeleteUser(TGID);
             this.Hide();
             admin admin = new admin();
             admin.Show();
@@ -45,24 +45,28 @@ namespace LGS_Tracking_Application
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string username = textBox2.Text;  // Username input
-            string password = textBox3.Text;  // Password input
-            int grade = Convert.ToInt32(textBox4.Text);     // Grade input
+            int TGID = int.Parse(textBox2.Text);
+            string password = textBox3.Text;
+            int grade;
+
+           
+            if (!int.TryParse(textBox4.Text, out grade))
+            {
+                MessageBox.Show("Lütfen geçerli bir sınıf girin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (!string.IsNullOrEmpty(password))
             {
-                // Kullanıcıyı güncelleme
-                userService.UpdateUser(username, password, grade);
+                userService.UpdateUser(TGID, password, grade);
                 MessageBox.Show("Kullanıcı başarıyla güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // ListView'i temizle ve güncellenmiş bilgileri yeniden göster
                 listView1.Items.Clear();
-                button3.PerformClick();
-
+                //button3.PerformClick();
             }
             else
             {
-                MessageBox.Show("Password ve Grade boş bırakılamaz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Password boş bırakılamaz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             List<TextBox> textBoxes = panel3.Controls.OfType<TextBox>().ToList();
@@ -75,17 +79,16 @@ namespace LGS_Tracking_Application
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var username = textBox2.Text;
-            string userDetails = userService.UserDetailFromUsername(username);
+            int TGID = int.Parse(textBox2.Text);
+            string userDetails = userService.UserDetailFromUsername(TGID);
 
             if (userDetails != null)
             {
-                // ListView ayarları
+              
                 listView1.View = View.Details;
                 listView1.FullRowSelect = true;
                 listView1.GridLines = true;
 
-                // Kolonları yalnızca bir kez ekle
                 if (listView1.Columns.Count == 0)
                 {
                     listView1.Columns.Add("Username", 75);
@@ -105,7 +108,7 @@ namespace LGS_Tracking_Application
                     item.SubItems.Add(details[2]);  // Grade
                 }
 
-                // ListView'e öğe ekleme
+              
                 listView1.Items.Add(item);
             }
             else

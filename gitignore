@@ -1,95 +1,69 @@
-# Visual Studio
+# Derleme klasörleri
+**/bin/
+**/obj/
 
+# Visual Studio dosyaları
 .vs/
-\*.user
-\*.suo
-\*.userosscache
-\*.sln.docstates
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# Build results
-
-\[Bb]in/
-\[Oo]bj/
-
-# NuGet packages
-
-\*.nupkg
+# NuGet paketleri
+*.nupkg
 packages/
 
-# .NET Core
-
+# .NET Core dosyaları
 project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# Resharper
+# ReSharper dosyaları
+_ReSharper*/
+*.ReSharperCache
 
-\_ReSharper\*/
-\*.ReSharperCache
-
-# Rider
-
+# Rider dosyaları
 .idea/
-\*.sln.iml
+*.sln.iml
 
-# User-specific files
+# Kullanıcıya özel dosyalar
+*.user
+*.rsuser
+*.suo
+*.vscode/
 
-\*.user
-\*.rsuser
-\*.suo
-\*.vscode/
-
-# OS generated files
-
-.DS\_Store
+# OS tarafından oluşturulan dosyalar
+.DS_Store
 Thumbs.db
 
-# Test output
-
+# Test çıktıları
 TestResults/
 
-# Publish artifacts
-
+# Yayın çıktıları
 publish/
 
 # Entity Framework Migrations
+Migrations/**/Snapshot*/
 
-Migrations/\*\*/Snapshot\*/
-
-# Windows image file caches
-
+# Windows resim dosyası önbellekleri
 Thumbs.db
 ehthumbs.db
 
-# DotCover
+# DotCover dosyaları
+*.dotCover
 
-\*.dotCover
-
-# JetBrains Rider
-
+# JetBrains Rider dosyaları
 .idea/
-\*.sln.iml
+*.sln.iml
 
-# Visual Studio Code
-
+# Visual Studio Code dosyaları
 .vscode/
 
-# Azure DevOps
-
+# Azure DevOps dosyaları
 azure-pipelines.yml
 
-# Others
+# Diğer dosyalar
+*.log
 
-\*.log
-
-# Include backups
-
-\#\*\~
-
-
-# Bunlar varsa kaldır:
-appsettings.json
-appsettings.*.json
-
-*appsettings.json
-*appsettings.json
+# Yedek dosyalar
+#*~
