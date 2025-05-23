@@ -61,6 +61,19 @@
           "SelectedChildIndex": 13,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResultService.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\ResultService.cs",
+              "RelativeDocumentMoniker": "Service\\ResultService.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\ResultService.cs",
+              "RelativeToolTip": "Service\\ResultService.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAiwJYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T19:55:20.684Z",
+              "IsPinned": true
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
@@ -91,20 +104,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ResultService.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\ResultService.cs",
-              "RelativeDocumentMoniker": "Service\\ResultService.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\ResultService.cs",
-              "RelativeToolTip": "Service\\ResultService.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAiwJYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T19:55:20.684Z",
-              "IsPinned": true,
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\ResultScreen.cs [Design]",
               "RelativeToolTip": "ResultScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:51:10.981Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-22T16:51:10.981Z"
             },
             {
               "$type": "Document",
@@ -152,8 +150,7 @@
               "RelativeToolTip": "Models\\Result.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:50:06.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T16:50:06.746Z"
             },
             {
               "$type": "Document",
@@ -163,7 +160,7 @@
               "RelativeDocumentMoniker": "Service\\UserService.cs",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\UserService.cs",
-              "ViewState": "AgIAAOcAAAAAAAAAAAD4v+AAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T16:40:28.866Z",
               "EditorCaption": ""
@@ -178,8 +175,7 @@
               "RelativeToolTip": "ResultScreen.cs",
               "ViewState": "AgIAADoBAAAAAAAAAAAkwEoBAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:29:34.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T16:29:34.501Z"
             },
             {
               "$type": "Document",
@@ -190,8 +186,7 @@
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\admin.cs [Design]",
               "RelativeToolTip": "admin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:29:41.063Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-22T16:29:41.063Z"
             },
             {
               "$type": "Document",
