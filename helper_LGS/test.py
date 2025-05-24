@@ -1,7 +1,6 @@
 from fpdf import FPDF
 import pandas as pd
 
-# Verileri DataFrame olarak oluştur
 import random
 
 columns = [
@@ -26,8 +25,8 @@ columns = [
 
 data = []
 
-for i in range(1, 21):  # 20 öğrenci
-    # Her ders için rastgele doğru sayısı, kalan yanlış
+for i in range(1, 21): 
+   
     tr_t = random.randint(10, 18)
     tr_f = 18 - tr_t
 
@@ -47,9 +46,9 @@ for i in range(1, 21):  # 20 öğrenci
     eng_f = 10 - eng_t
 
     row = [
-        i,  # Id
-        i,  # User
-        1,  # Exam number
+        i,  
+        i, 
+        1, 
         tr_t,
         tr_f,
         mth_t,
@@ -62,8 +61,8 @@ for i in range(1, 21):  # 20 öğrenci
         rel_f,
         eng_t,
         eng_f,
-        "2025-05-01",  # Date
-        8,  # Grade
+        "2025-05-01",  
+        8, 
     ]
     data.append(row)
 
@@ -73,24 +72,22 @@ pdf = FPDF()
 pdf.add_page()
 pdf.set_font("Arial", size=10)
 
-# Başlık
 pdf.set_font("Arial", style="B", size=10)
 pdf.cell(220, 10, ln=1, align="C")
 pdf.set_font("Arial", size=5)
 
-# Tablo başlığı
 col_width = 220 / len(columns)
 for col in columns:
     pdf.cell(col_width - 2, 5, col + " ", border=1)
 pdf.ln()
 
-# Satır verileri
+
 for _, row in df.iterrows():
     for item in row:
         pdf.cell(col_width - 2, 5, str(item) + " ", border=1)
     pdf.ln()
 
-# PDF'i kaydet
+
 output_path = "results.pdf"
 pdf.output(output_path)
 
