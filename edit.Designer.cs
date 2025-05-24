@@ -56,9 +56,9 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             label1.Location = new Point(18, 174);
             label1.Name = "label1";
-            label1.Size = new Size(370, 32);
+            label1.Size = new Size(253, 32);
             label1.TabIndex = 0;
-            label1.Text = "Silinecek Ögrenci Kullanıcı Adı:";
+            label1.Text = "Silinecek Ögrenci TC:";
             // 
             // label2
             // 
@@ -191,9 +191,9 @@
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label4.Location = new Point(30, 34);
             label4.Name = "label4";
-            label4.Size = new Size(107, 21);
+            label4.Size = new Size(99, 21);
             label4.TabIndex = 8;
-            label4.Text = "Kullanıcı Adı";
+            label4.Text = "Kullanıcı TC";
             // 
             // button2
             // 

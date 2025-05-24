@@ -1,0 +1,22 @@
+INSERT INTO users (userName, password, role, firstName, lastName, grade, tgid)
+VALUES 
+    ('ayilmaz1', 'Pass2025!', 'Student', 'Ahmet', 'Yılmaz', 8, 123456),
+    ('mdemir2', 'User@1234', 'Student', 'Mehmet', 'Demir', 8, 234567),
+    ('akaya3', 'Secret#2025', 'Student', 'Ayşe', 'Kaya', 8, 345678),
+    ('fcelik4', 'Pwd!2025', 'Student', 'Fatma', 'Çelik', 8, 456789),
+    ('aozturk5', 'Pass#5678', 'Student', 'Ali', 'Öztürk', 8, 567890),
+    ('mshahin6', 'User!2025', 'Student', 'Merve', 'Şahin', 8, 678901),
+    ('ckoç7', 'Pwd2025#', 'Student', 'Can', 'Koç', 8, 789012),
+    ('zkilic8', 'Pass@3456', 'Student', 'Zeynep', 'Kılıç', 8, 890123),
+    ('eyildiz9', 'Secret!7890', 'Student', 'Emre', 'Yıldız', 8, 901234),
+    ('darslan10', 'Pwd#4321', 'Student', 'Deniz', 'Arslan', 8, 123450),
+    ('sbulut11', 'Pass!9876', 'Student', 'Selin', 'Bulut', 8, 234560),
+    ('ekara12', 'User#6543', 'Student', 'Eren', 'Kara', 8, 345670),
+    ('bgunes13', 'Secret@3210', 'Student', 'Burak', 'Güneş', 8, 456780),
+    ('doz14', 'Pwd!7654', 'Student', 'Derya', 'Öz', 8, 567890),
+    ('kaksoy15', 'Pass#2109', 'Student', 'Kaan', 'Aksoy', 8, 678900),
+    ('esari16', 'User@8765', 'Student', 'Ece', 'Sarı', 8, 789000),
+    ('hdemirtas17', 'Pwd!5432', 'Student', 'Hakan', 'Demirtaş', 8, 890000),
+    ('scetin18', 'Secret#1098', 'Student', 'Sevgi', 'Çetin', 8, 901000),
+    ('cyalcin19', 'Pass@6543', 'Student', 'Cem', 'Yalçın', 8, 123400),
+    ('bkurt20', 'User!3210', 'Student', 'Buse', 'Kurt', 8, 234500);

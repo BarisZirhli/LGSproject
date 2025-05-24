@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LGS_Tracking_Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43a75b296e2dda2681b2ff7beb852e47356d0080")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10476753e0d905726b2d5a5a9267367c667f6eef")]
 [assembly: System.Reflection.AssemblyProductAttribute("LGS_Tracking_Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LGS_Tracking_Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
