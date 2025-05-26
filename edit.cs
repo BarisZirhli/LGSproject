@@ -49,7 +49,7 @@ namespace LGS_Tracking_Application
             string password = textBox3.Text;
             int grade;
 
-           
+
             if (!int.TryParse(textBox4.Text, out grade))
             {
                 MessageBox.Show("Lütfen geçerli bir sınıf girin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -84,7 +84,7 @@ namespace LGS_Tracking_Application
 
             if (userDetails != null)
             {
-              
+
                 listView1.View = View.Details;
                 listView1.FullRowSelect = true;
                 listView1.GridLines = true;
@@ -108,7 +108,7 @@ namespace LGS_Tracking_Application
                     item.SubItems.Add(details[2]);  // Grade
                 }
 
-              
+
                 listView1.Items.Add(item);
             }
             else
@@ -120,6 +120,13 @@ namespace LGS_Tracking_Application
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            admin admin = new admin();
+            admin.Show();
         }
     }
 }

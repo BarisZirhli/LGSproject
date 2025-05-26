@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\resultscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:resultscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\resultscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:resultscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\resultscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:resultscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\service\\resultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:service\\resultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\service\\resultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:service\\resultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|c:\\users\\pc\\source\\repos\\lgs_tracking_application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516D157A-A58F-4B97-970A-C260D246AE01}|LGS_Tracking_Application.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ResultService.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\ResultService.cs",
               "RelativeDocumentMoniker": "Service\\ResultService.cs",
@@ -76,18 +72,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T19:55:20.684Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "edit.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs",
-              "RelativeDocumentMoniker": "edit.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs [Design]",
-              "RelativeToolTip": "edit.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T16:36:16.21Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -123,19 +107,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Session.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Session.cs",
-              "RelativeDocumentMoniker": "Session.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Session.cs",
-              "RelativeToolTip": "Session.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "edit.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs",
+              "RelativeDocumentMoniker": "edit.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs",
+              "RelativeToolTip": "edit.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAmwIAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T17:03:15.046Z"
+              "WhenOpened": "2025-05-26T22:40:19.493Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "edit.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs",
+              "RelativeDocumentMoniker": "edit.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\edit.cs [Design]",
+              "RelativeToolTip": "edit.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:36:16.21Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -159,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Models\\Result.cs",
               "RelativeDocumentMoniker": "Models\\Result.cs",
@@ -167,7 +164,8 @@
               "RelativeToolTip": "Models\\Result.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:50:06.746Z"
+              "WhenOpened": "2025-05-22T16:50:06.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -177,22 +175,23 @@
               "RelativeDocumentMoniker": "Service\\UserService.cs",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\UserService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAOAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAiwHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T16:40:28.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ResultScreen.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\ResultScreen.cs",
               "RelativeDocumentMoniker": "ResultScreen.cs",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\ResultScreen.cs",
               "RelativeToolTip": "ResultScreen.cs",
-              "ViewState": "AgIAADoBAAAAAAAAAAAkwEoBAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAM4BAAAAAAAAAAAYwOIBAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:29:34.501Z"
+              "WhenOpened": "2025-05-22T16:29:34.501Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -203,32 +202,19 @@
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\admin.cs [Design]",
               "RelativeToolTip": "admin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:29:41.063Z"
+              "WhenOpened": "2025-05-22T16:29:41.063Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "student.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs",
               "RelativeDocumentMoniker": "student.cs",
               "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs [Design]",
               "RelativeToolTip": "student.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:23:50.282Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\login.cs",
-              "RelativeToolTip": "login.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:15:28.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T16:23:50.282Z"
             },
             {
               "$type": "Document",
@@ -243,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "student.cs",
               "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\LGS_Tracking_Application\\student.cs",
               "RelativeDocumentMoniker": "student.cs",

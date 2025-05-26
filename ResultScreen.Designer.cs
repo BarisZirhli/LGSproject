@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             listView1 = new ListView();
             button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
             label1 = new Label();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             saveFileDialog1 = new SaveFileDialog();
             button3 = new Button();
             button4 = new Button();
             txtFN = new TextBox();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
@@ -64,25 +63,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button2.Location = new Point(562, 278);
-            button2.Name = "button2";
-            button2.Size = new Size(179, 56);
-            button2.TabIndex = 2;
-            button2.Text = "Ögrenci Sonuç Getir";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(761, 298);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(139, 28);
-            textBox1.TabIndex = 3;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -96,17 +76,17 @@
             // chart1
             // 
             chart1.BackColor = SystemColors.ControlDark;
-            chartArea2.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            chart1.Legends.Add(legend2);
-            chart1.Location = new Point(906, 93);
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(913, 118);
             chart1.Name = "chart1";
             chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
             chart1.Size = new Size(676, 493);
             chart1.TabIndex = 5;
             chart1.Text = "chart1";
@@ -127,7 +107,7 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button4.Location = new Point(562, 373);
+            button4.Location = new Point(567, 311);
             button4.Name = "button4";
             button4.Size = new Size(179, 56);
             button4.TabIndex = 7;
@@ -137,25 +117,35 @@
             // 
             // txtFN
             // 
-            txtFN.Location = new Point(761, 384);
+            txtFN.Location = new Point(766, 322);
             txtFN.Multiline = true;
             txtFN.Name = "txtFN";
             txtFN.Size = new Size(139, 28);
             txtFN.TabIndex = 8;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button5.Location = new Point(1457, 592);
+            button5.Name = "button5";
+            button5.Size = new Size(149, 67);
+            button5.TabIndex = 9;
+            button5.Text = "Ana Sayfaya Dön";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // ResultScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1594, 623);
+            ClientSize = new Size(1637, 684);
+            Controls.Add(button5);
             Controls.Add(txtFN);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(chart1);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(listView1);
             Name = "ResultScreen";
@@ -169,13 +159,12 @@
 
         private ListView listView1;
         private Button button1;
-        private Button button2;
-        private TextBox textBox1;
         private Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private SaveFileDialog saveFileDialog1;
         private Button button3;
         private Button button4;
         private TextBox txtFN;
+        private Button button5;
     }
 }

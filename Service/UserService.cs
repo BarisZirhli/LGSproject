@@ -115,21 +115,11 @@ namespace LGS_Tracking_Application.Service
 
             try 
             {
-                var nameParts = fullname.Trim().Split(' ');
-                if (nameParts.Length != 2)
-                {
-                    MessageBox.Show("Please enter both first and last name.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return new List<User>();
-                }
-
-                string firstName = nameParts[0];
-                string lastName = nameParts[1];
 
                 var users = _context.Users
-                    .Where(user => 
-                        (user.FirstName != null && user.LastName != null) &&
-                        (user.FirstName.ToLower() + " " + user.LastName.ToLower()) == fullname.ToLower())
-                    .ToList();
+                .Where(user => user.FirstName.ToLower().Contains(fullname.ToLower()))
+                .ToList();
+
 
                 if (!users.Any())
                 {

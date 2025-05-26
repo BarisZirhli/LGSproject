@@ -45,6 +45,7 @@
             button2 = new Button();
             listView1 = new ListView();
             label3 = new Label();
+            button4 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -226,11 +227,24 @@
             label3.TabIndex = 0;
             label3.Text = "Ögrenci Düzenleme Ekranı";
             // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            button4.Location = new Point(665, 495);
+            button4.Name = "button4";
+            button4.Size = new Size(178, 72);
+            button4.TabIndex = 6;
+            button4.Text = "Ana Sayfaya dön";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // edit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1529, 450);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(1529, 616);
+            Controls.Add(button4);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "edit";
@@ -263,5 +277,6 @@
         private TextBox textBox2;
         private Panel panel3;
         private Button button3;
+        private Button button4;
     }
 }

@@ -1,9 +1,10 @@
-﻿using LGS_Tracking_Application.Service;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
+using LGS_Tracking_Application.Models;
+using LGS_Tracking_Application.Service;
 using System.Data;
 using System.Windows.Forms.DataVisualization.Charting;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using LGS_Tracking_Application.Models;
 
 namespace LGS_Tracking_Application
 {
@@ -181,44 +182,96 @@ namespace LGS_Tracking_Application
 
             if (save.ShowDialog() == DialogResult.OK)
             {
-                Document doc = new Document(PageSize.A4);
+                Document doc = new Document(PageSize.A4, 40, 40, 40, 40);
+
                 try
                 {
                     PdfWriter.GetInstance(doc, new FileStream(save.FileName, FileMode.Create));
                     doc.Open();
 
-                    // Add title
-                    Paragraph title = new Paragraph("Student Results")
+                    var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20, BaseColor.BLACK);
+                    var nameFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, new BaseColor(0, 70, 140));
+                    var labelFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.DARK_GRAY);
+                    var valueFont = FontFactory.GetFont(FontFactory.HELVETICA, 12, BaseColor.BLACK);
+
+                  
+                    Paragraph title = new Paragraph("Student Result Report", titleFont)
                     {
-                        Alignment = Element.ALIGN_CENTER
+                        Alignment = Element.ALIGN_CENTER,
+                        SpacingAfter = 25f
                     };
-                    title.SpacingAfter = 20;
                     doc.Add(title);
 
-                    // Create a table with column count equal to listView1 columns
-                    PdfPTable table = new PdfPTable(listView1.Columns.Count);
-                    table.WidthPercentage = 100;
+                   
+                    var studentsGrouped = listView1.Items
+                        .Cast<ListViewItem>()
+                        .GroupBy(item => item.SubItems[2].Text) 
+                        .ToList();
 
-                    // Add headers
-                    foreach (ColumnHeader column in listView1.Columns)
+                    foreach (var studentGroup in studentsGrouped)
                     {
-                        PdfPCell header = new PdfPCell(new Phrase(column.Text));
-                        header.BackgroundColor = BaseColor.LIGHT_GRAY;
-                        table.AddCell(header);
-                    }
+                        string studentName = studentGroup.Key;
 
-                    // Add data rows
-                    foreach (ListViewItem item in listView1.Items)
-                    {
-                        table.AddCell(item.Text); // First column
-                        foreach (ListViewItem.ListViewSubItem subItem in item.SubItems.Cast<ListViewItem.ListViewSubItem>().Skip(1))
+                      
+                        Paragraph studentHeader = new Paragraph(studentName, nameFont)
                         {
-                            table.AddCell(subItem.Text);
+                            SpacingBefore = 15f,
+                            SpacingAfter = 10f
+                        };
+                        doc.Add(studentHeader);
+
+                      
+                        var exams = studentGroup
+                            .GroupBy(item => item.SubItems[3].Text + item.SubItems[4].Text) // ExamID + Date
+                            .ToList();
+
+                        foreach (var examGroup in exams)
+                        {
+                            string examId = examGroup.First().SubItems[3].Text;
+                            string examDate = examGroup.First().SubItems[4].Text;
+
+                          
+                            Paragraph examInfo = new Paragraph($"Exam ID: {examId}    Date: {examDate}", labelFont)
+                            {
+                                SpacingAfter = 5f
+                            };
+                            doc.Add(examInfo);
+
+                           
+                            PdfPTable subjectTable = new PdfPTable(2)
+                            {
+                                WidthPercentage = 60,
+                                SpacingAfter = 15f
+                            };
+
+                            foreach (var item in examGroup)
+                            {
+                                string subject = item.SubItems[0].Text;
+                                string netScore = item.SubItems[1].Text;
+
+                                PdfPCell subjectCell = new PdfPCell(new Phrase(subject, labelFont))
+                                {
+                                    BackgroundColor = new BaseColor(230, 230, 250),
+                                    Padding = 5
+                                };
+                                PdfPCell scoreCell = new PdfPCell(new Phrase(netScore, valueFont))
+                                {
+                                    Padding = 5
+                                };
+
+                                subjectTable.AddCell(subjectCell);
+                                subjectTable.AddCell(scoreCell);
+                            }
+
+                            doc.Add(subjectTable);
                         }
+
+                      
+                        LineSeparator line = new LineSeparator(1f, 100f, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -2);
+                        doc.Add(new Chunk(line));
                     }
 
-                    doc.Add(table);
-                    MessageBox.Show("PDF exported successfully.");
+                    MessageBox.Show("Şık PDF başarıyla oluşturuldu.");
                 }
                 catch (Exception ex)
                 {
@@ -229,8 +282,8 @@ namespace LGS_Tracking_Application
                     doc.Close();
                 }
             }
-
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -247,7 +300,7 @@ namespace LGS_Tracking_Application
 
             foreach (var userId in allUserIds)
             {
-                // GetResultById yerine GetResultByUserId kullanın
+              
                 var userResults = resultService.GetResultByUserId(userId);
                 var student = userService.GetUserById(userId);
 
@@ -257,7 +310,7 @@ namespace LGS_Tracking_Application
 
                     foreach (var result in userResults)
                     {
-                        // Ayrıca English iki kere eklenmiş, onu da düzeltelim
+                        
                         listView1.Items.Add(new ListViewItem(new[] {
                             "Turkish",
                             result.TurkishNet.ToString("0.00"),
@@ -403,7 +456,7 @@ namespace LGS_Tracking_Application
             }
         }
 
-        // Grafik güncelleme metodu
+       
         private void UpdateChart()
         {
             if (listView1.Items.Count == 0) return;
@@ -427,7 +480,7 @@ namespace LGS_Tracking_Application
                 chart1.ChartAreas[0].AxisX.CustomLabels.Add(label);
             }
 
-            // Chart ayarları
+           
             chart1.ChartAreas[0].AxisX.Minimum = 1;
             chart1.ChartAreas[0].AxisX.Maximum = 8;
             chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
@@ -459,6 +512,13 @@ namespace LGS_Tracking_Application
             series.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
 
             chart1.Series.Add(series);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            admin adminForm = new admin();
+            adminForm.Show();
         }
     }
 }
