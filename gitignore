@@ -99,3 +99,13 @@ secrets.json
 publish/
 *.vs/
 .env
+
+
+# Configuration files
+appsettings.json
+appsettings.*.json
+!appsettings.Development.json
+
+# Or more broadly
+*.config
+connectionstrings.json
